@@ -6,7 +6,7 @@ import torch
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load the model
-model_name = "Qwen/Qwen2.5-0.5B"  # Replace with your model name
+model_name = "Qwen/Qwen2.5-0.5B"  
 model = AutoModelForCausalLM.from_pretrained(model_name).to(device)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
