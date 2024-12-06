@@ -1,4 +1,4 @@
-# TinyLlama-with-FastAPI
+# Qwen-with-FastAPI
 
 Steps I have taken : 
 
