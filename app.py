@@ -24,7 +24,7 @@ def generate_response(request: PromptRequest):
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids  # Convert prompt to input IDs
     output = model.generate(
     input_ids, 
-    max_length=100,  # Allow more tokens to generate a longer response
+    max_length=len(input_ids[0]) + 20,  # Dynamic length based on input size
     num_beams=5,     # Use beam search for better quality responses
     repetition_penalty=2.0,  # Penalize repeated phrases
     temperature=0.7,  # Adjust creativity (lower = deterministic, higher = creative)
